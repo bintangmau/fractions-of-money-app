@@ -53,8 +53,8 @@ function App () {
 
       if(sisa >= 50000) {
         data.push({ value: 50000, qty: 1})
-
         sisa = sisa - 50000
+
         if(sisa >= 20000) {
           data.push({ value: 20000, qty: parseInt(sisa / 20000)})
           sisa = sisa - 20000 * parseInt(sisa / 20000)
@@ -114,6 +114,89 @@ function App () {
 
                     setSisaMoney(sisa)
                   }
+                }
+              }
+            }
+          }
+        } else if(sisa >= 10000) {
+          data.push({ value: 10000, qty: 1 })
+          sisa = sisa - 10000
+
+          if(sisa >= 5000) {
+            data.push({ value: 5000, qty: 1 })
+            sisa = sisa - 5000
+
+            if(sisa >= 2000) {
+              data.push({ value: 2000, qty: parseInt(sisa / 2000) })
+              sisa = sisa - 2000 * parseInt(sisa / 2000)
+
+              if(sisa >= 1000) {
+                data.push({ value: 1000, qty: 1 })
+                sisa = sisa - 1000
+
+                if(sisa >= 500) {
+                  data.push({ value: 500, qty: 1 })
+                  sisa = sisa - 500
+
+                  if(sisa >= 200) {
+                    data.push({ value: 200, qty: parseInt(sisa / 200) })
+                    sisa = sisa - 200 * parseInt(sisa / 200)
+
+                    if(sisa >= 100) {
+                      data.push({ value: 100, qty: 1 })
+                      sisa = sisa - 100
+
+                      setSisaMoney(sisa)
+                    } else {
+                      setSisaMoney(sisa)
+                    }
+                  } else if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+                    
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }
+                }
+              }
+            }
+          }
+        } else if(sisa >= 5000) {
+          data.push({ value: 5000, qty: 1 })
+          sisa = sisa - 5000
+
+          if(sisa >= 2000) {
+            data.push({ value: 2000, qty: parseInt(sisa / 2000) })
+            sisa = sisa - 2000 * parseInt(sisa / 2000)
+
+            if(sisa >= 1000) {
+              data.push({ value: 1000, qty: 1 })
+              sisa = sisa - 1000
+
+              if(sisa >= 500) {
+                data.push({ value: 500, qty: 1 })
+                sisa = sisa - 500
+
+                if(sisa >= 200) {
+                  data.push({ value: 200, qty: parseInt(sisa / 200) })
+                  sisa = sisa - 200 * parseInt(sisa / 200)
+
+                  if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }
+                } else if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+                  
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
                 }
               }
             }
@@ -473,9 +556,7 @@ function App () {
         }
       }
       setListMoney(data)
-    } else if(money >= 50000 && money < 100000) {
-      console.log("PECAHAN 50 RB")
-    }
+    } 
   }
   
   return (
