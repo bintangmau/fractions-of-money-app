@@ -9,6 +9,7 @@ function App () {
   const [ listMoney, setListMoney ] = useState([])
   const [ sisaMoney, setSisaMoney ] = useState(0)
 
+
   const isPalindrome = (str) => {
     var string = str;
     var kataDepan = []
@@ -6288,7 +6289,8 @@ function App () {
           />
           <button
             onClick={pecahUang}
-            style={{
+            style={
+            {
               backgroundColor: "black",
               fontWeight: "bold",
               border: "none",
@@ -6336,7 +6338,7 @@ function App () {
           <tfoot style={{ backgroundColor: "#c4c4c4", height: "40px", fontWeight: "bold"}}>
             <tr>
               <td>Sisa</td>
-              <td>{sisaMoney}</td>
+              <td>Rp, {sisaMoney} ,-</td>
             </tr>
           </tfoot>
 
