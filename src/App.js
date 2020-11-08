@@ -50,102 +50,63 @@ function App () {
         value: 100000,
         qty: qty1
       })
-
+  
       if(sisa >= 50000) {
         data.push({ value: 50000, qty: 1})
         sisa = sisa - 50000
-
+        
         if(sisa >= 20000) {
-          data.push({ value: 20000, qty: parseInt(sisa / 20000)})
+          data.push({ value: 20000, qty: parseInt(sisa / 20000) })
           sisa = sisa - 20000 * parseInt(sisa / 20000)
-      
+          
           if(sisa >= 10000) {
-            data.push({ value: 10000, qty: 1})
+            data.push({ value: 10000, qty: 1 })
             sisa = sisa - 10000
-
+           
             if(sisa >= 5000) {
-              data.push({ value: 5000, qty: parseInt(sisa / 5000)})
+              data.push({ value: 5000, qty: 1 })
               sisa = sisa - 5000
-
+          
               if(sisa >= 2000) {
-                data.push({ value: 2000, qty: parseInt(sisa / 2000)})
+                data.push({ value: 2000, qty: parseInt(sisa / 2000) })
                 sisa = sisa - 2000 * parseInt(sisa / 2000)
-
-                  if(sisa >= 1000) {
-                    data.push({ value: 1000, qty: 1})
-                    sisa = sisa - 1000
-                    console.log(sisa)
-                  }
-              } else if(sisa >= 1000) {
-                data.push({ value: 1000, qty: 1})
-                sisa = sisa - 1000
-
-              }
-            }
-          } else if(sisa >= 5000) {
-            data.push({ value: 5000, qty: 1 })
-            sisa = sisa - 5000
-
-            if(sisa >= 2000) {
-              data.push({ value: 2000, qty: parseInt(sisa / 2000) })
-              sisa = sisa - 2000 * parseInt(sisa / 2000)
-
-              if(sisa >= 1000) {
-                data.push({ value: 1000, qty: 1 })
-                sisa = sisa - 1000
-
-                if(sisa >= 500) {
-                  data.push({ value: 500, qty: 1 })
-                  sisa = sisa - 500
-
-                  if(sisa >= 200) {
-                    data.push({ value: 200, qty:  parseInt(sisa / 200) })
-                    sisa = sisa - 200 * parseInt(sisa / 200)
-                    
-                    if(sisa >= 100) {
+                
+                if(sisa >= 1000) {
+                  data.push({ value: 1000, qty: 1 })
+                  sisa = sisa - 1000
+              
+                  if(sisa >= 500) {
+                    data.push({ value: 500, qty: 1 })
+                    sisa = sisa - 500
+                  
+                    if(sisa >= 200) {
+                      data.push({ value: 200, qty: parseInt(sisa / 200) })
+                      sisa = sisa - 200 * parseInt(sisa / 200)
+      
+                      if(sisa >= 100) {
+                        data.push({ value: 100, qty: 1 })
+                        sisa = sisa - 100
+      
+                        setSisaMoney(sisa)
+                      } else {
+                        setSisaMoney(sisa)
+                      }
+                    } else if(sisa >= 100) {
                       data.push({ value: 100, qty: 1 })
                       sisa = sisa - 100
-
+      
+                      setSisaMoney(sisa)
+                    } else {
                       setSisaMoney(sisa)
                     }
-                  } else if(sisa >= 100) {
-                    data.push({ value: 100, qty: 1 }) 
-                    sisa = sisa - 100
-
-                    setSisaMoney(sisa)
-                  }
-                }
-              }
-            }
-          }
-        } else if(sisa >= 10000) {
-          data.push({ value: 10000, qty: 1 })
-          sisa = sisa - 10000
-
-          if(sisa >= 5000) {
-            data.push({ value: 5000, qty: 1 })
-            sisa = sisa - 5000
-
-            if(sisa >= 2000) {
-              data.push({ value: 2000, qty: parseInt(sisa / 2000) })
-              sisa = sisa - 2000 * parseInt(sisa / 2000)
-
-              if(sisa >= 1000) {
-                data.push({ value: 1000, qty: 1 })
-                sisa = sisa - 1000
-
-                if(sisa >= 500) {
-                  data.push({ value: 500, qty: 1 })
-                  sisa = sisa - 500
-
-                  if(sisa >= 200) {
+                  } else if(sisa >= 200) {
                     data.push({ value: 200, qty: parseInt(sisa / 200) })
                     sisa = sisa - 200 * parseInt(sisa / 200)
-
+      
                     if(sisa >= 100) {
                       data.push({ value: 100, qty: 1 })
                       sisa = sisa - 100
-
+      
                       setSisaMoney(sisa)
                     } else {
                       setSisaMoney(sisa)
@@ -153,39 +114,43 @@ function App () {
                   } else if(sisa >= 100) {
                     data.push({ value: 100, qty: 1 })
                     sisa = sisa - 100
-                    
+      
                     setSisaMoney(sisa)
                   } else {
                     setSisaMoney(sisa)
                   }
-                }
-              }
-            }
-          }
-        } else if(sisa >= 5000) {
-          data.push({ value: 5000, qty: 1 })
-          sisa = sisa - 5000
-
-          if(sisa >= 2000) {
-            data.push({ value: 2000, qty: parseInt(sisa / 2000) })
-            sisa = sisa - 2000 * parseInt(sisa / 2000)
-
-            if(sisa >= 1000) {
-              data.push({ value: 1000, qty: 1 })
-              sisa = sisa - 1000
-
-              if(sisa >= 500) {
-                data.push({ value: 500, qty: 1 })
-                sisa = sisa - 500
-
-                if(sisa >= 200) {
+                } else if(sisa >= 500) {
+                  data.push({ value: 500, qty: 1 })
+                  sisa = sisa - 500
+        
+                  if(sisa >= 200) {
+                    data.push({ value: 200, qty: parseInt(sisa / 200) })
+                    sisa = sisa - 200 * parseInt(sisa / 200)
+        
+                    if(sisa >= 100) {
+                      data.push({ value: 100, qty: 1 })
+                      sisa = sisa - 100
+        
+                      setSisaMoney(sisa)
+                    } else {
+                      setSisaMoney(sisa)
+                    }
+                  } else if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+        
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }
+                } else if(sisa >= 200) {
                   data.push({ value: 200, qty: parseInt(sisa / 200) })
                   sisa = sisa - 200 * parseInt(sisa / 200)
-
+        
                   if(sisa >= 100) {
                     data.push({ value: 100, qty: 1 })
                     sisa = sisa - 100
-
+        
                     setSisaMoney(sisa)
                   } else {
                     setSisaMoney(sisa)
@@ -198,107 +163,2205 @@ function App () {
                 } else {
                   setSisaMoney(sisa)
                 }
-              }
-            }
-          }
-        }
-      } else if(sisa >= 20000) {
-        data.push({ value: 20000, qty: parseInt(sisa / 20000) })
-        sisa = sisa - 20000 * parseInt(sisa / 20000)
-
-        if(sisa >= 10000) {
-          data.push({ value: 10000, qty: 1 })
-          sisa = sisa - 10000
-          
-          if(sisa >= 5000) {
-            data.push({ value: 5000, qty: 1 })
-            sisa = sisa - 5000
-
-            if(sisa >= 2000) {  
-              data.push({ value: 2000, qty: 1 })
-              sisa = sisa - 2000
-
-              if(sisa >= 1000) {
-                data.push({ value: 1000, qty: 1})
+              } else if(sisa >= 1000) {
+                data.push({ value: 1000, qty: 1 })
                 sisa = sisa - 1000
-
+            
                 if(sisa >= 500) {
                   data.push({ value: 500, qty: 1 })
                   sisa = sisa - 500
-
+                
                   if(sisa >= 200) {
-                    data.push({ value: 200, qty: 1})
-                    sisa = sisa - 200
-
+                    data.push({ value: 200, qty: parseInt(sisa / 200) })
+                    sisa = sisa - 200 * parseInt(sisa / 200)
+    
                     if(sisa >= 100) {
                       data.push({ value: 100, qty: 1 })
+                      sisa = sisa - 100
+    
+                      setSisaMoney(sisa)
+                    } else {
+                      setSisaMoney(sisa)
                     }
                   } else if(sisa >= 100) {
-                    data.push({ value: 100, qty: 1}) 
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+    
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
                   }
+                } else if(sisa >= 200) {
+                  data.push({ value: 200, qty: parseInt(sisa / 200) })
+                  sisa = sisa - 200 * parseInt(sisa / 200)
+    
+                  if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+    
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }
+                } else if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+    
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
                 }
+              } else if(sisa >= 500) {
+                data.push({ value: 500, qty: 1 })
+                sisa = sisa - 500
+      
+                if(sisa >= 200) {
+                  data.push({ value: 200, qty: parseInt(sisa / 200) })
+                  sisa = sisa - 200 * parseInt(sisa / 200)
+      
+                  if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+      
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }
+                } else if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+      
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+      
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+      
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+                
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 2000) {
+              data.push({ value: 2000, qty: parseInt(sisa / 2000) })
+              sisa = sisa - 2000 * parseInt(sisa / 2000)
+              
+              if(sisa >= 1000) {
+                data.push({ value: 1000, qty: 1 })
+                sisa = sisa - 1000
+               
+                if(sisa >= 500) {
+                  data.push({ value: 500, qty: 1 })
+                  sisa = sisa - 500
+                 
+                  if(sisa >= 200) {
+                    data.push({ value: 200, qty: parseInt(sisa / 200) })
+                    sisa = sisa - 200 * parseInt(sisa / 200)
+    
+                    if(sisa >= 100) {
+                      data.push({ value: 100, qty: 1 })
+                      sisa = sisa - 100
+    
+                      setSisaMoney(sisa)
+                    } else {
+                      setSisaMoney(sisa)
+                    }
+                  } else if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+    
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }
+                } else if(sisa >= 200) {
+                  data.push({ value: 200, qty: parseInt(sisa / 200) })
+                  sisa = sisa - 200 * parseInt(sisa / 200)
+               
+                  if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+    
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }   
+                } else if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+    
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 500) {
+                data.push({ value: 500, qty: 1 })
+                sisa = sisa - 500
+               
+                if(sisa >= 200) {
+                  data.push({ value: 200, qty: parseInt(sisa / 200) })
+                  sisa = sisa - 200 * parseInt(sisa / 200)
+    
+                  if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100 
+    
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }
+                } else if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+    
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+               
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+    
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
               }
             } else if(sisa >= 1000) {
               data.push({ value: 1000, qty: 1 })
               sisa = sisa - 1000
-
+    
               if(sisa >= 500) {
                 data.push({ value: 500, qty: 1 })
                 sisa = sisa - 500
-
+          
                 if(sisa >= 200) {
                   data.push({ value: 200, qty: parseInt(sisa / 200) })
-                  sisa = sisa - 200
-
+                  sisa = sisa - 200 * parseInt(sisa / 200)
+               
                   if(sisa >= 100) {
                     data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+    
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }
+                } else if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+    
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+    
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+    
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+    
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+    
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+    
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+    
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+              
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 5000) {
+            data.push({ value: 5000, qty: 1 })
+            sisa = sisa - 5000
+        
+            if(sisa >= 2000) {  
+              data.push({ value: 2000, qty: parseInt(sisa / 2000) })
+              sisa = sisa - 2000 * parseInt(sisa / 2000)
+              
+              if(sisa >= 1000) {
+                data.push({ value: 1000, qty: 1})
+                sisa = sisa - 1000
+                
+                if(sisa >= 500) {
+                  data.push({ value: 500, qty: 1 })
+                  sisa = sisa - 500
+               
+                  if(sisa >= 200) {
+                    data.push({ value: 200, qty: parseInt(sisa / 200) })
+                    sisa = sisa - 200 * parseInt(sisa / 200)
+                    
+                    if(sisa >= 100) {
+                      data.push({ value: 100, qty: 1 })
+                      sisa = sisa - 100
+          
+                      setSisaMoney(sisa)
+                    } else {
+                      setSisaMoney(sisa)
+                    }
+                  } else if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1}) 
+                    sisa = sisa - 100
+          
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }
+                }  else if(sisa >= 200) {
+                  data.push({ value: 200, qty: parseInt(sisa / 200) })
+                  sisa = sisa - 200 * parseInt(sisa / 200)
+          
+                  if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+        
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }
+                } else if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+        
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 500) {
+                data.push({ value: 500, qty: 1 })
+                sisa = sisa - 500
+      
+                if(sisa >= 200) {
+                  data.push({ value: 200, qty: parseInt(sisa / 200) })
+                  sisa = sisa - 200 * parseInt(sisa / 200)
+      
+                  if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+      
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
                   }
                 } else if(sisa >= 100) {
                   data.push({ value: 100, qty: 1}) 
+                  sisa = sisa - 100
+                  
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
                 }
+              } else if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+               
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+      
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+      
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
               }
+            } else if(sisa >= 1000) {
+              data.push({ value: 1000, qty: 1 })
+              sisa = sisa - 1000
+            
+              if(sisa >= 500) {
+                data.push({ value: 500, qty: 1 })
+                sisa = sisa - 500
+          
+                if(sisa >= 200) {
+                  data.push({ value: 200, qty: parseInt(sisa / 200) })
+                  sisa = sisa - 200 * parseInt(sisa / 200)
+    
+                  if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+    
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }
+                } else if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1}) 
+                  sisa = sisa - 100
+                  
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200
+    
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+    
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+    
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+    
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+    
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1}) 
+                sisa = sisa - 100
+                
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+     
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+    
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
             }
+          } else if(sisa >= 2000) {  
+            data.push({ value: 2000, qty: parseInt(sisa / 2000) })
+            sisa = sisa - 2000 * parseInt(sisa / 2000)
+         
+            if(sisa >= 1000) {
+              data.push({ value: 1000, qty: 1})
+              sisa = sisa - 1000
+             
+              if(sisa >= 500) {
+                data.push({ value: 500, qty: 1 })
+                sisa = sisa - 500
+         
+                if(sisa >= 200) {
+                  data.push({ value: 200, qty: parseInt(sisa / 200) })
+                  sisa = sisa - 200 * parseInt(sisa / 200)
+        
+                  if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+        
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }
+                } else if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1}) 
+                  sisa = sisa - 100
+        
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+             
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+        
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+                
+                setSisaMoney(sisa)
+              } else {  
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+        
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+      
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+      
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1}) 
+                sisa = sisa - 100
+      
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+      
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+      
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+              
+              setSisaMoney(sisa)
+            } else {  
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 1000) {
+            data.push({ value: 1000, qty: 1 })
+            sisa = sisa - 1000
+       
+            if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+              
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa/ 200)
+             
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+      
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1}) 
+                sisa = sisa - 100
+      
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+      
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+      
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+            
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+      
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+    
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1}) 
+              sisa = sisa - 100
+    
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+    
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+    
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+            
+            setSisaMoney(sisa)
+          } else {
+            
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 10000) {
+          data.push({ value: 10000, qty: 1 })
+          sisa = sisa - 10000
+         
+          if(sisa >= 5000) {
+            data.push({ value: 5000, qty: 1 })
+            sisa = sisa - 5000
+        
+            if(sisa >= 2000) {
+              data.push({ value: 2000, qty: parseInt(sisa / 2000) })
+              sisa = sisa - 2000 * parseInt(sisa / 2000)
+              
+              if(sisa >= 1000) {
+                data.push({ value: 1000, qty: 1 })
+                sisa = sisa - 1000
+            
+                if(sisa >= 500) {
+                  data.push({ value: 500, qty: 1 })
+                  sisa = sisa - 500
+                
+                  if(sisa >= 200) {
+                    data.push({ value: 200, qty: parseInt(sisa / 200) })
+                    sisa = sisa - 200 * parseInt(sisa / 200)
+    
+                    if(sisa >= 100) {
+                      data.push({ value: 100, qty: 1 })
+                      sisa = sisa - 100
+    
+                      setSisaMoney(sisa)
+                    } else {
+                      setSisaMoney(sisa)
+                    }
+                  } else if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+    
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }
+                } else if(sisa >= 200) {
+                  data.push({ value: 200, qty: parseInt(sisa / 200) })
+                  sisa = sisa - 200 * parseInt(sisa / 200)
+    
+                  if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+    
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }
+                } else if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+    
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 500) {
+                data.push({ value: 500, qty: 1 })
+                sisa = sisa - 500
+      
+                if(sisa >= 200) {
+                  data.push({ value: 200, qty: parseInt(sisa / 200) })
+                  sisa = sisa - 200 * parseInt(sisa / 200)
+      
+                  if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+      
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }
+                } else if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+      
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+      
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+      
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+                
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 1000) {
+              data.push({ value: 1000, qty: 1 })
+              sisa = sisa - 1000
+          
+              if(sisa >= 500) {
+                data.push({ value: 500, qty: 1 })
+                sisa = sisa - 500
+              
+                if(sisa >= 200) {
+                  data.push({ value: 200, qty: parseInt(sisa / 200) })
+                  sisa = sisa - 200 * parseInt(sisa / 200)
+  
+                  if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+  
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }
+                } else if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+  
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+  
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+  
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+    
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+    
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+    
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+    
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+              
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 2000) {
+            data.push({ value: 2000, qty: parseInt(sisa / 2000) })
+            sisa = sisa - 2000 * parseInt(sisa / 2000)
+            
+            if(sisa >= 1000) {
+              data.push({ value: 1000, qty: 1 })
+              sisa = sisa - 1000
+             
+              if(sisa >= 500) {
+                data.push({ value: 500, qty: 1 })
+                sisa = sisa - 500
+               
+                if(sisa >= 200) {
+                  data.push({ value: 200, qty: parseInt(sisa / 200) })
+                  sisa = sisa - 200 * parseInt(sisa / 200)
+  
+                  if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+  
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }
+                } else if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+  
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+             
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+  
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }   
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+             
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+  
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100 
+  
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+             
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 1000) {
+            data.push({ value: 1000, qty: 1 })
+            sisa = sisa - 1000
+  
+            if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+        
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+             
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+  
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+  
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+  
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+  
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+  
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+            
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
           }
         } else if(sisa >= 5000) {
           data.push({ value: 5000, qty: 1 })
           sisa = sisa - 5000
-
-          if(sisa >= 2000) {
+      
+          if(sisa >= 2000) {  
             data.push({ value: 2000, qty: parseInt(sisa / 2000) })
             sisa = sisa - 2000 * parseInt(sisa / 2000)
-
+            
             if(sisa >= 1000) {
-              data.push({ value: 1000, qty: 1 })
+              data.push({ value: 1000, qty: 1})
               sisa = sisa - 1000
-
+              
               if(sisa >= 500) {
                 data.push({ value: 500, qty: 1 })
                 sisa = sisa - 500
-
+             
                 if(sisa >= 200) {
                   data.push({ value: 200, qty: parseInt(sisa / 200) })
                   sisa = sisa - 200 * parseInt(sisa / 200)
-
+                  
                   if(sisa >= 100) {
                     data.push({ value: 100, qty: 1 })
                     sisa = sisa - 100
-
+        
                     setSisaMoney(sisa)
-                  } 
+                  } else {
+                    setSisaMoney(sisa)
+                  }
+                } else if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1}) 
+                  sisa = sisa - 100
+        
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              }  else if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+        
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+      
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+      
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+    
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+    
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+    
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1}) 
+                sisa = sisa - 100
+                
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+             
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+    
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 1000) {
+            data.push({ value: 1000, qty: 1 })
+            sisa = sisa - 1000
+          
+            if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+        
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+  
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+  
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1}) 
+                sisa = sisa - 100
+                
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200
+  
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+  
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+  
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1}) 
+              sisa = sisa - 100
+              
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+   
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+  
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 2000) {  
+          data.push({ value: 2000, qty: parseInt(sisa / 2000) })
+          sisa = sisa - 2000 * parseInt(sisa / 2000)
+       
+          if(sisa >= 1000) {
+            data.push({ value: 1000, qty: 1})
+            sisa = sisa - 1000
+           
+            if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+       
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+      
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+      
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1}) 
+                sisa = sisa - 100
+      
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+           
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+      
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+              
+              setSisaMoney(sisa)
+            } else {  
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+      
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+    
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1}) 
+              sisa = sisa - 100
+    
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+    
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+    
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+            
+            setSisaMoney(sisa)
+          } else {  
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 1000) {
+          data.push({ value: 1000, qty: 1 })
+          sisa = sisa - 1000
+     
+          if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+            
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa/ 200)
+           
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1}) 
+              sisa = sisa - 100
+    
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+    
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+    
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+          
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 500) {
+          data.push({ value: 500, qty: 1 })
+          sisa = sisa - 500
+    
+          if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+  
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1}) 
+            sisa = sisa - 100
+  
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 200) {
+          data.push({ value: 200, qty: parseInt(sisa / 200) })
+          sisa = sisa - 200 * parseInt(sisa / 200)
+  
+          if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+  
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 100) {
+          data.push({ value: 100, qty: 1 })
+          sisa = sisa - 100
+          
+          setSisaMoney(sisa)
+        } else {
+          
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 20000) {
+        data.push({ value: 20000, qty: parseInt(sisa / 20000) })
+        sisa = sisa - 20000 * parseInt(sisa / 20000)
+        
+        if(sisa >= 10000) {
+          data.push({ value: 10000, qty: 1 })
+          sisa = sisa - 10000
+         
+          if(sisa >= 5000) {
+            data.push({ value: 5000, qty: 1 })
+            sisa = sisa - 5000
+        
+            if(sisa >= 2000) {
+              data.push({ value: 2000, qty: parseInt(sisa / 2000) })
+              sisa = sisa - 2000 * parseInt(sisa / 2000)
+              
+              if(sisa >= 1000) {
+                data.push({ value: 1000, qty: 1 })
+                sisa = sisa - 1000
+            
+                if(sisa >= 500) {
+                  data.push({ value: 500, qty: 1 })
+                  sisa = sisa - 500
+                
+                  if(sisa >= 200) {
+                    data.push({ value: 200, qty: parseInt(sisa / 200) })
+                    sisa = sisa - 200 * parseInt(sisa / 200)
+    
+                    if(sisa >= 100) {
+                      data.push({ value: 100, qty: 1 })
+                      sisa = sisa - 100
+    
+                      setSisaMoney(sisa)
+                    } else {
+                      setSisaMoney(sisa)
+                    }
+                  } else if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+    
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }
+                } else if(sisa >= 200) {
+                  data.push({ value: 200, qty: parseInt(sisa / 200) })
+                  sisa = sisa - 200 * parseInt(sisa / 200)
+    
+                  if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+    
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }
                 } else if(sisa >= 100) {
                   data.push({ value: 100, qty: 1 })
                   sisa = sisa - 100
-
-                  setSisaMoney(sisa) 
+    
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
                 }
+              } else if(sisa >= 500) {
+                data.push({ value: 500, qty: 1 })
+                sisa = sisa - 500
+      
+                if(sisa >= 200) {
+                  data.push({ value: 200, qty: parseInt(sisa / 200) })
+                  sisa = sisa - 200 * parseInt(sisa / 200)
+      
+                  if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+      
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }
+                } else if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+      
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+      
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+      
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+                
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
               }
+            } else if(sisa >= 1000) {
+              data.push({ value: 1000, qty: 1 })
+              sisa = sisa - 1000
+          
+              if(sisa >= 500) {
+                data.push({ value: 500, qty: 1 })
+                sisa = sisa - 500
+              
+                if(sisa >= 200) {
+                  data.push({ value: 200, qty: parseInt(sisa / 200) })
+                  sisa = sisa - 200 * parseInt(sisa / 200)
+  
+                  if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+  
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }
+                } else if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+  
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+  
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+  
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+    
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+    
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+    
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+    
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+              
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
             }
+          } else if(sisa >= 2000) {
+            data.push({ value: 2000, qty: parseInt(sisa / 2000) })
+            sisa = sisa - 2000 * parseInt(sisa / 2000)
+            
+            if(sisa >= 1000) {
+              data.push({ value: 1000, qty: 1 })
+              sisa = sisa - 1000
+             
+              if(sisa >= 500) {
+                data.push({ value: 500, qty: 1 })
+                sisa = sisa - 500
+               
+                if(sisa >= 200) {
+                  data.push({ value: 200, qty: parseInt(sisa / 200) })
+                  sisa = sisa - 200 * parseInt(sisa / 200)
+  
+                  if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+  
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }
+                } else if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+  
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+             
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+  
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }   
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+             
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+  
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100 
+  
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+             
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 1000) {
+            data.push({ value: 1000, qty: 1 })
+            sisa = sisa - 1000
+  
+            if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+        
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+             
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+  
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+  
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+  
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+  
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+  
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+            
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
           }
+        } else if(sisa >= 5000) {
+          data.push({ value: 5000, qty: 1 })
+          sisa = sisa - 5000
+      
+          if(sisa >= 2000) {  
+            data.push({ value: 2000, qty: parseInt(sisa / 2000) })
+            sisa = sisa - 2000 * parseInt(sisa / 2000)
+            
+            if(sisa >= 1000) {
+              data.push({ value: 1000, qty: 1})
+              sisa = sisa - 1000
+              
+              if(sisa >= 500) {
+                data.push({ value: 500, qty: 1 })
+                sisa = sisa - 500
+             
+                if(sisa >= 200) {
+                  data.push({ value: 200, qty: parseInt(sisa / 200) })
+                  sisa = sisa - 200 * parseInt(sisa / 200)
+                  
+                  if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+        
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }
+                } else if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1}) 
+                  sisa = sisa - 100
+        
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              }  else if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+        
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+      
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+      
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+    
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+    
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+    
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1}) 
+                sisa = sisa - 100
+                
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+             
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+    
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 1000) {
+            data.push({ value: 1000, qty: 1 })
+            sisa = sisa - 1000
+          
+            if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+        
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+  
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+  
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1}) 
+                sisa = sisa - 100
+                
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200
+  
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+  
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+  
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1}) 
+              sisa = sisa - 100
+              
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+   
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+  
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 2000) {  
+          data.push({ value: 2000, qty: parseInt(sisa / 2000) })
+          sisa = sisa - 2000 * parseInt(sisa / 2000)
+       
+          if(sisa >= 1000) {
+            data.push({ value: 1000, qty: 1})
+            sisa = sisa - 1000
+           
+            if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+       
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+      
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+      
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1}) 
+                sisa = sisa - 100
+      
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+           
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+      
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+              
+              setSisaMoney(sisa)
+            } else {  
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+      
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+    
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1}) 
+              sisa = sisa - 100
+    
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+    
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+    
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+            
+            setSisaMoney(sisa)
+          } else {  
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 1000) {
+          data.push({ value: 1000, qty: 1 })
+          sisa = sisa - 1000
+     
+          if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+            
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa/ 200)
+           
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1}) 
+              sisa = sisa - 100
+    
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+    
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+    
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+          
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 500) {
+          data.push({ value: 500, qty: 1 })
+          sisa = sisa - 500
+    
+          if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+  
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1}) 
+            sisa = sisa - 100
+  
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 200) {
+          data.push({ value: 200, qty: parseInt(sisa / 200) })
+          sisa = sisa - 200 * parseInt(sisa / 200)
+  
+          if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+  
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 100) {
+          data.push({ value: 100, qty: 1 })
+          sisa = sisa - 100
+          
+          setSisaMoney(sisa)
+        } else {
+          
+          setSisaMoney(sisa)
         }
       } else if(sisa >= 10000) {
         data.push({ value: 10000, qty: 1 })
         sisa = sisa - 10000
-
+       
         if(sisa >= 5000) {
           data.push({ value: 5000, qty: 1 })
           sisa = sisa - 5000
@@ -306,33 +2369,107 @@ function App () {
           if(sisa >= 2000) {
             data.push({ value: 2000, qty: parseInt(sisa / 2000) })
             sisa = sisa - 2000 * parseInt(sisa / 2000)
-
-            if(sisa >= 500) {
-              data.push({ value: 500, qty: 1 })
-              sisa = sisa - 500
-
-              if(sisa >= 200) {
-                data.push({ value: 200, qty: parseInt(sisa / 200) })
-                sisa = sisa - 200 * parseInt(sisa / 200)
-
-                if(sisa >= 100) {
+            
+            if(sisa >= 1000) {
+              data.push({ value: 1000, qty: 1 })
+              sisa = sisa - 1000
+          
+              if(sisa >= 500) {
+                data.push({ value: 500, qty: 1 })
+                sisa = sisa - 500
+              
+                if(sisa >= 200) {
+                  data.push({ value: 200, qty: parseInt(sisa / 200) })
+                  sisa = sisa - 200 * parseInt(sisa / 200)
+  
+                  if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+  
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }
+                } else if(sisa >= 100) {
                   data.push({ value: 100, qty: 1 })
                   sisa = sisa - 100
-
+  
                   setSisaMoney(sisa)
                 } else {
                   setSisaMoney(sisa)
                 }
+              } else if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+  
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+  
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
               }
+            } else if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+    
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+    
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+    
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+    
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+              
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
             }
           } else if(sisa >= 1000) {
             data.push({ value: 1000, qty: 1 })
             sisa = sisa - 1000
-
+        
             if(sisa >= 500) {
               data.push({ value: 500, qty: 1 })
               sisa = sisa - 500
-
+            
               if(sisa >= 200) {
                 data.push({ value: 200, qty: parseInt(sisa / 200) })
                 sisa = sisa - 200 * parseInt(sisa / 200)
@@ -349,6 +2486,8 @@ function App () {
                 data.push({ value: 100, qty: 1 })
                 sisa = sisa - 100
 
+                setSisaMoney(sisa)
+              } else {
                 setSisaMoney(sisa)
               }
             } else if(sisa >= 200) {
@@ -371,11 +2510,54 @@ function App () {
             } else {
               setSisaMoney(sisa)
             }
+          } else if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+  
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+  
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+  
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+            
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
           }
         } else if(sisa >= 2000) {
           data.push({ value: 2000, qty: parseInt(sisa / 2000) })
           sisa = sisa - 2000 * parseInt(sisa / 2000)
-      
+          
           if(sisa >= 1000) {
             data.push({ value: 1000, qty: 1 })
             sisa = sisa - 1000
@@ -383,7 +2565,7 @@ function App () {
             if(sisa >= 500) {
               data.push({ value: 500, qty: 1 })
               sisa = sisa - 500
-
+             
               if(sisa >= 200) {
                 data.push({ value: 200, qty: parseInt(sisa / 200) })
                 sisa = sisa - 200 * parseInt(sisa / 200)
@@ -401,11 +2583,13 @@ function App () {
                 sisa = sisa - 100
 
                 setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
               }
             } else if(sisa >= 200) {
               data.push({ value: 200, qty: parseInt(sisa / 200) })
               sisa = sisa - 200 * parseInt(sisa / 200)
-
+           
               if(sisa >= 100) {
                 data.push({ value: 100, qty: 1 })
                 sisa = sisa - 100
@@ -419,11 +2603,13 @@ function App () {
               sisa = sisa - 100
 
               setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
             }
           } else if(sisa >= 500) {
             data.push({ value: 500, qty: 1 })
             sisa = sisa - 500
-
+           
             if(sisa >= 200) {
               data.push({ value: 200, qty: parseInt(sisa / 200) })
               sisa = sisa - 200 * parseInt(sisa / 200)
@@ -440,6 +2626,8 @@ function App () {
               data.push({ value: 100, qty: 1 })
               sisa = sisa - 100
 
+              setSisaMoney(sisa)
+            } else {
               setSisaMoney(sisa)
             }
           } else if(sisa >= 200) {
@@ -554,9 +2742,3503 @@ function App () {
         } else {
           setSisaMoney(sisa)
         }
+      } else if(sisa >= 5000) {
+        data.push({ value: 5000, qty: 1 })
+        sisa = sisa - 5000
+    
+        if(sisa >= 2000) {  
+          data.push({ value: 2000, qty: parseInt(sisa / 2000) })
+          sisa = sisa - 2000 * parseInt(sisa / 2000)
+          
+          if(sisa >= 1000) {
+            data.push({ value: 1000, qty: 1})
+            sisa = sisa - 1000
+            
+            if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+           
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+                
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+      
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1}) 
+                sisa = sisa - 100
+      
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            }  else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+      
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+    
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+  
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+  
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1}) 
+              sisa = sisa - 100
+              
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+           
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+  
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 1000) {
+          data.push({ value: 1000, qty: 1 })
+          sisa = sisa - 1000
+        
+          if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+      
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1}) 
+              sisa = sisa - 100
+              
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200
+
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 500) {
+          data.push({ value: 500, qty: 1 })
+          sisa = sisa - 500
+
+          if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1}) 
+            sisa = sisa - 100
+            
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 200) {
+          data.push({ value: 200, qty: parseInt(sisa / 200) })
+          sisa = sisa - 200 * parseInt(sisa / 200)
+ 
+          if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 100) {
+          data.push({ value: 100, qty: 1 })
+          sisa = sisa - 100
+
+          setSisaMoney(sisa)
+        } else {
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 2000) {  
+        data.push({ value: 2000, qty: parseInt(sisa / 2000) })
+        sisa = sisa - 2000 * parseInt(sisa / 2000)
+     
+        if(sisa >= 1000) {
+          data.push({ value: 1000, qty: 1})
+          sisa = sisa - 1000
+         
+          if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+     
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+    
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1}) 
+              sisa = sisa - 100
+    
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+         
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+    
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+            
+            setSisaMoney(sisa)
+          } else {  
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 500) {
+          data.push({ value: 500, qty: 1 })
+          sisa = sisa - 500
+    
+          if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+  
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1}) 
+            sisa = sisa - 100
+  
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 200) {
+          data.push({ value: 200, qty: parseInt(sisa / 200) })
+          sisa = sisa - 200 * parseInt(sisa / 200)
+  
+          if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+  
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 100) {
+          data.push({ value: 100, qty: 1 })
+          sisa = sisa - 100
+          
+          setSisaMoney(sisa)
+        } else {  
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 1000) {
+        data.push({ value: 1000, qty: 1 })
+        sisa = sisa - 1000
+   
+        if(sisa >= 500) {
+          data.push({ value: 500, qty: 1 })
+          sisa = sisa - 500
+          
+          if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa/ 200)
+         
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1}) 
+            sisa = sisa - 100
+  
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 200) {
+          data.push({ value: 200, qty: parseInt(sisa / 200) })
+          sisa = sisa - 200 * parseInt(sisa / 200)
+  
+          if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+  
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 100) {
+          data.push({ value: 100, qty: 1 })
+          sisa = sisa - 100
+        
+          setSisaMoney(sisa)
+        } else {
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 500) {
+        data.push({ value: 500, qty: 1 })
+        sisa = sisa - 500
+  
+        if(sisa >= 200) {
+          data.push({ value: 200, qty: parseInt(sisa / 200) })
+          sisa = sisa - 200 * parseInt(sisa / 200)
+
+          if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 100) {
+          data.push({ value: 100, qty: 1}) 
+          sisa = sisa - 100
+
+          setSisaMoney(sisa)
+        } else {
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 200) {
+        data.push({ value: 200, qty: parseInt(sisa / 200) })
+        sisa = sisa - 200 * parseInt(sisa / 200)
+
+        if(sisa >= 100) {
+          data.push({ value: 100, qty: 1 })
+          sisa = sisa - 100
+
+          setSisaMoney(sisa)
+        } else {
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 100) {
+        data.push({ value: 100, qty: 1 })
+        sisa = sisa - 100
+        
+        setSisaMoney(sisa)
+      } else {
+        
+        setSisaMoney(sisa)
       }
       setListMoney(data)
-    } 
+    } else  if(money >= 50000) {
+      const data = []
+      var qty1 = parseInt(money / 100000)
+      var sisa = money - 100000 * qty1
+
+      data.push({ value: 50000, qty: 1})
+      sisa = sisa - 50000
+      
+      if(sisa >= 20000) {
+        data.push({ value: 20000, qty: parseInt(sisa / 20000) })
+        sisa = sisa - 20000 * parseInt(sisa / 20000)
+        
+        if(sisa >= 10000) {
+          data.push({ value: 10000, qty: 1 })
+          sisa = sisa - 10000
+         
+          if(sisa >= 5000) {
+            data.push({ value: 5000, qty: 1 })
+            sisa = sisa - 5000
+        
+            if(sisa >= 2000) {
+              data.push({ value: 2000, qty: parseInt(sisa / 2000) })
+              sisa = sisa - 2000 * parseInt(sisa / 2000)
+              
+              if(sisa >= 1000) {
+                data.push({ value: 1000, qty: 1 })
+                sisa = sisa - 1000
+            
+                if(sisa >= 500) {
+                  data.push({ value: 500, qty: 1 })
+                  sisa = sisa - 500
+                
+                  if(sisa >= 200) {
+                    data.push({ value: 200, qty: parseInt(sisa / 200) })
+                    sisa = sisa - 200 * parseInt(sisa / 200)
+    
+                    if(sisa >= 100) {
+                      data.push({ value: 100, qty: 1 })
+                      sisa = sisa - 100
+    
+                      setSisaMoney(sisa)
+                    } else {
+                      setSisaMoney(sisa)
+                    }
+                  } else if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+    
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }
+                } else if(sisa >= 200) {
+                  data.push({ value: 200, qty: parseInt(sisa / 200) })
+                  sisa = sisa - 200 * parseInt(sisa / 200)
+    
+                  if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+    
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }
+                } else if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+    
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 500) {
+                data.push({ value: 500, qty: 1 })
+                sisa = sisa - 500
+      
+                if(sisa >= 200) {
+                  data.push({ value: 200, qty: parseInt(sisa / 200) })
+                  sisa = sisa - 200 * parseInt(sisa / 200)
+      
+                  if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+      
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }
+                } else if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+      
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+      
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+      
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+                
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 1000) {
+              data.push({ value: 1000, qty: 1 })
+              sisa = sisa - 1000
+          
+              if(sisa >= 500) {
+                data.push({ value: 500, qty: 1 })
+                sisa = sisa - 500
+              
+                if(sisa >= 200) {
+                  data.push({ value: 200, qty: parseInt(sisa / 200) })
+                  sisa = sisa - 200 * parseInt(sisa / 200)
+  
+                  if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+  
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }
+                } else if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+  
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+  
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+  
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+    
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+    
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+    
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+    
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+              
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 2000) {
+            data.push({ value: 2000, qty: parseInt(sisa / 2000) })
+            sisa = sisa - 2000 * parseInt(sisa / 2000)
+            
+            if(sisa >= 1000) {
+              data.push({ value: 1000, qty: 1 })
+              sisa = sisa - 1000
+             
+              if(sisa >= 500) {
+                data.push({ value: 500, qty: 1 })
+                sisa = sisa - 500
+               
+                if(sisa >= 200) {
+                  data.push({ value: 200, qty: parseInt(sisa / 200) })
+                  sisa = sisa - 200 * parseInt(sisa / 200)
+  
+                  if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+  
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }
+                } else if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+  
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+             
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+  
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }   
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+             
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+  
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100 
+  
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+             
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 1000) {
+            data.push({ value: 1000, qty: 1 })
+            sisa = sisa - 1000
+  
+            if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+        
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+             
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+  
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+  
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+  
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+  
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+  
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+            
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 5000) {
+          data.push({ value: 5000, qty: 1 })
+          sisa = sisa - 5000
+      
+          if(sisa >= 2000) {  
+            data.push({ value: 2000, qty: parseInt(sisa / 2000) })
+            sisa = sisa - 2000 * parseInt(sisa / 2000)
+            
+            if(sisa >= 1000) {
+              data.push({ value: 1000, qty: 1})
+              sisa = sisa - 1000
+              
+              if(sisa >= 500) {
+                data.push({ value: 500, qty: 1 })
+                sisa = sisa - 500
+             
+                if(sisa >= 200) {
+                  data.push({ value: 200, qty: parseInt(sisa / 200) })
+                  sisa = sisa - 200 * parseInt(sisa / 200)
+                  
+                  if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+        
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }
+                } else if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1}) 
+                  sisa = sisa - 100
+        
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              }  else if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+        
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+      
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+      
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+    
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+    
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+    
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1}) 
+                sisa = sisa - 100
+                
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+             
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+    
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 1000) {
+            data.push({ value: 1000, qty: 1 })
+            sisa = sisa - 1000
+          
+            if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+        
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+  
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+  
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1}) 
+                sisa = sisa - 100
+                
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200
+  
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+  
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+  
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1}) 
+              sisa = sisa - 100
+              
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+   
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+  
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 2000) {  
+          data.push({ value: 2000, qty: parseInt(sisa / 2000) })
+          sisa = sisa - 2000 * parseInt(sisa / 2000)
+       
+          if(sisa >= 1000) {
+            data.push({ value: 1000, qty: 1})
+            sisa = sisa - 1000
+           
+            if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+       
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+      
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+      
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1}) 
+                sisa = sisa - 100
+      
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+           
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+      
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+              
+              setSisaMoney(sisa)
+            } else {  
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+      
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+    
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1}) 
+              sisa = sisa - 100
+    
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+    
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+    
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+            
+            setSisaMoney(sisa)
+          } else {  
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 1000) {
+          data.push({ value: 1000, qty: 1 })
+          sisa = sisa - 1000
+     
+          if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+            
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa/ 200)
+           
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1}) 
+              sisa = sisa - 100
+    
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+    
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+    
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+          
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 500) {
+          data.push({ value: 500, qty: 1 })
+          sisa = sisa - 500
+    
+          if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+  
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1}) 
+            sisa = sisa - 100
+  
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 200) {
+          data.push({ value: 200, qty: parseInt(sisa / 200) })
+          sisa = sisa - 200 * parseInt(sisa / 200)
+  
+          if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+  
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 100) {
+          data.push({ value: 100, qty: 1 })
+          sisa = sisa - 100
+          
+          setSisaMoney(sisa)
+        } else {
+          
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 10000) {
+        data.push({ value: 10000, qty: 1 })
+        sisa = sisa - 10000
+       
+        if(sisa >= 5000) {
+          data.push({ value: 5000, qty: 1 })
+          sisa = sisa - 5000
+      
+          if(sisa >= 2000) {
+            data.push({ value: 2000, qty: parseInt(sisa / 2000) })
+            sisa = sisa - 2000 * parseInt(sisa / 2000)
+            
+            if(sisa >= 1000) {
+              data.push({ value: 1000, qty: 1 })
+              sisa = sisa - 1000
+          
+              if(sisa >= 500) {
+                data.push({ value: 500, qty: 1 })
+                sisa = sisa - 500
+              
+                if(sisa >= 200) {
+                  data.push({ value: 200, qty: parseInt(sisa / 200) })
+                  sisa = sisa - 200 * parseInt(sisa / 200)
+  
+                  if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+  
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }
+                } else if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+  
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+  
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+  
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+    
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+    
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+    
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+    
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+              
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 1000) {
+            data.push({ value: 1000, qty: 1 })
+            sisa = sisa - 1000
+        
+            if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+            
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+  
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+  
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+  
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+            
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 2000) {
+          data.push({ value: 2000, qty: parseInt(sisa / 2000) })
+          sisa = sisa - 2000 * parseInt(sisa / 2000)
+          
+          if(sisa >= 1000) {
+            data.push({ value: 1000, qty: 1 })
+            sisa = sisa - 1000
+           
+            if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+             
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+           
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }   
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+           
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100 
+
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+           
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 1000) {
+          data.push({ value: 1000, qty: 1 })
+          sisa = sisa - 1000
+
+          if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+      
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+           
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 500) {
+          data.push({ value: 500, qty: 1 })
+          sisa = sisa - 500
+
+          if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 200) {
+          data.push({ value: 200, qty: parseInt(sisa / 200) })
+          sisa = sisa - 200 * parseInt(sisa / 200)
+
+          if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 100) {
+          data.push({ value: 100, qty: 1 })
+          sisa = sisa - 100
+          
+          setSisaMoney(sisa)
+        } else {
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 5000) {
+        data.push({ value: 5000, qty: 1 })
+        sisa = sisa - 5000
+    
+        if(sisa >= 2000) {  
+          data.push({ value: 2000, qty: parseInt(sisa / 2000) })
+          sisa = sisa - 2000 * parseInt(sisa / 2000)
+          
+          if(sisa >= 1000) {
+            data.push({ value: 1000, qty: 1})
+            sisa = sisa - 1000
+            
+            if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+           
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+                
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+      
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1}) 
+                sisa = sisa - 100
+      
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            }  else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+      
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+    
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+  
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+  
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1}) 
+              sisa = sisa - 100
+              
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+           
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+  
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 1000) {
+          data.push({ value: 1000, qty: 1 })
+          sisa = sisa - 1000
+        
+          if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+      
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1}) 
+              sisa = sisa - 100
+              
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200
+
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 500) {
+          data.push({ value: 500, qty: 1 })
+          sisa = sisa - 500
+
+          if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1}) 
+            sisa = sisa - 100
+            
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 200) {
+          data.push({ value: 200, qty: parseInt(sisa / 200) })
+          sisa = sisa - 200 * parseInt(sisa / 200)
+ 
+          if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 100) {
+          data.push({ value: 100, qty: 1 })
+          sisa = sisa - 100
+
+          setSisaMoney(sisa)
+        } else {
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 2000) {  
+        data.push({ value: 2000, qty: parseInt(sisa / 2000) })
+        sisa = sisa - 2000 * parseInt(sisa / 2000)
+     
+        if(sisa >= 1000) {
+          data.push({ value: 1000, qty: 1})
+          sisa = sisa - 1000
+         
+          if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+     
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+    
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1}) 
+              sisa = sisa - 100
+    
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+         
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+    
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+            
+            setSisaMoney(sisa)
+          } else {  
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 500) {
+          data.push({ value: 500, qty: 1 })
+          sisa = sisa - 500
+    
+          if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+  
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1}) 
+            sisa = sisa - 100
+  
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 200) {
+          data.push({ value: 200, qty: parseInt(sisa / 200) })
+          sisa = sisa - 200 * parseInt(sisa / 200)
+  
+          if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+  
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 100) {
+          data.push({ value: 100, qty: 1 })
+          sisa = sisa - 100
+          
+          setSisaMoney(sisa)
+        } else {  
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 1000) {
+        data.push({ value: 1000, qty: 1 })
+        sisa = sisa - 1000
+   
+        if(sisa >= 500) {
+          data.push({ value: 500, qty: 1 })
+          sisa = sisa - 500
+          
+          if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa/ 200)
+         
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1}) 
+            sisa = sisa - 100
+  
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 200) {
+          data.push({ value: 200, qty: parseInt(sisa / 200) })
+          sisa = sisa - 200 * parseInt(sisa / 200)
+  
+          if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+  
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 100) {
+          data.push({ value: 100, qty: 1 })
+          sisa = sisa - 100
+        
+          setSisaMoney(sisa)
+        } else {
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 500) {
+        data.push({ value: 500, qty: 1 })
+        sisa = sisa - 500
+  
+        if(sisa >= 200) {
+          data.push({ value: 200, qty: parseInt(sisa / 200) })
+          sisa = sisa - 200 * parseInt(sisa / 200)
+
+          if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 100) {
+          data.push({ value: 100, qty: 1}) 
+          sisa = sisa - 100
+
+          setSisaMoney(sisa)
+        } else {
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 200) {
+        data.push({ value: 200, qty: parseInt(sisa / 200) })
+        sisa = sisa - 200 * parseInt(sisa / 200)
+
+        if(sisa >= 100) {
+          data.push({ value: 100, qty: 1 })
+          sisa = sisa - 100
+
+          setSisaMoney(sisa)
+        } else {
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 100) {
+        data.push({ value: 100, qty: 1 })
+        sisa = sisa - 100
+        
+        setSisaMoney(sisa)
+      } else {
+        
+        setSisaMoney(sisa)
+      }
+      setListMoney(data)
+    } else  if(money >= 20000) {
+      const data = []
+      var qty1 = parseInt(money / 100000)
+      var sisa = money - 100000 * qty1
+
+      data.push({ value: 20000, qty: parseInt(sisa / 20000) })
+      sisa = sisa - 20000 * parseInt(sisa / 20000)
+      
+      if(sisa >= 10000) {
+        data.push({ value: 10000, qty: 1 })
+        sisa = sisa - 10000
+       
+        if(sisa >= 5000) {
+          data.push({ value: 5000, qty: 1 })
+          sisa = sisa - 5000
+      
+          if(sisa >= 2000) {
+            data.push({ value: 2000, qty: parseInt(sisa / 2000) })
+            sisa = sisa - 2000 * parseInt(sisa / 2000)
+            
+            if(sisa >= 1000) {
+              data.push({ value: 1000, qty: 1 })
+              sisa = sisa - 1000
+          
+              if(sisa >= 500) {
+                data.push({ value: 500, qty: 1 })
+                sisa = sisa - 500
+              
+                if(sisa >= 200) {
+                  data.push({ value: 200, qty: parseInt(sisa / 200) })
+                  sisa = sisa - 200 * parseInt(sisa / 200)
+  
+                  if(sisa >= 100) {
+                    data.push({ value: 100, qty: 1 })
+                    sisa = sisa - 100
+  
+                    setSisaMoney(sisa)
+                  } else {
+                    setSisaMoney(sisa)
+                  }
+                } else if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+  
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+  
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+  
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+    
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+    
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+    
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+    
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+              
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 1000) {
+            data.push({ value: 1000, qty: 1 })
+            sisa = sisa - 1000
+        
+            if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+            
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+  
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+  
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+  
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+            
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 2000) {
+          data.push({ value: 2000, qty: parseInt(sisa / 2000) })
+          sisa = sisa - 2000 * parseInt(sisa / 2000)
+          
+          if(sisa >= 1000) {
+            data.push({ value: 1000, qty: 1 })
+            sisa = sisa - 1000
+           
+            if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+             
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+           
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }   
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+           
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100 
+
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+           
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 1000) {
+          data.push({ value: 1000, qty: 1 })
+          sisa = sisa - 1000
+
+          if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+      
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+           
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 500) {
+          data.push({ value: 500, qty: 1 })
+          sisa = sisa - 500
+
+          if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 200) {
+          data.push({ value: 200, qty: parseInt(sisa / 200) })
+          sisa = sisa - 200 * parseInt(sisa / 200)
+
+          if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 100) {
+          data.push({ value: 100, qty: 1 })
+          sisa = sisa - 100
+          
+          setSisaMoney(sisa)
+        } else {
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 5000) {
+        data.push({ value: 5000, qty: 1 })
+        sisa = sisa - 5000
+    
+        if(sisa >= 2000) {  
+          data.push({ value: 2000, qty: parseInt(sisa / 2000) })
+          sisa = sisa - 2000 * parseInt(sisa / 2000)
+          
+          if(sisa >= 1000) {
+            data.push({ value: 1000, qty: 1})
+            sisa = sisa - 1000
+            
+            if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+           
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+                
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+      
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1}) 
+                sisa = sisa - 100
+      
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            }  else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+      
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+    
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+  
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+  
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1}) 
+              sisa = sisa - 100
+              
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+           
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+  
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 1000) {
+          data.push({ value: 1000, qty: 1 })
+          sisa = sisa - 1000
+        
+          if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+      
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1}) 
+              sisa = sisa - 100
+              
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200
+
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 500) {
+          data.push({ value: 500, qty: 1 })
+          sisa = sisa - 500
+
+          if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1}) 
+            sisa = sisa - 100
+            
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 200) {
+          data.push({ value: 200, qty: parseInt(sisa / 200) })
+          sisa = sisa - 200 * parseInt(sisa / 200)
+ 
+          if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 100) {
+          data.push({ value: 100, qty: 1 })
+          sisa = sisa - 100
+
+          setSisaMoney(sisa)
+        } else {
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 2000) {  
+        data.push({ value: 2000, qty: parseInt(sisa / 2000) })
+        sisa = sisa - 2000 * parseInt(sisa / 2000)
+     
+        if(sisa >= 1000) {
+          data.push({ value: 1000, qty: 1})
+          sisa = sisa - 1000
+         
+          if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+     
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+    
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+    
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1}) 
+              sisa = sisa - 100
+    
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+         
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+    
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+            
+            setSisaMoney(sisa)
+          } else {  
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 500) {
+          data.push({ value: 500, qty: 1 })
+          sisa = sisa - 500
+    
+          if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+  
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1}) 
+            sisa = sisa - 100
+  
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 200) {
+          data.push({ value: 200, qty: parseInt(sisa / 200) })
+          sisa = sisa - 200 * parseInt(sisa / 200)
+  
+          if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+  
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 100) {
+          data.push({ value: 100, qty: 1 })
+          sisa = sisa - 100
+          
+          setSisaMoney(sisa)
+        } else {  
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 1000) {
+        data.push({ value: 1000, qty: 1 })
+        sisa = sisa - 1000
+   
+        if(sisa >= 500) {
+          data.push({ value: 500, qty: 1 })
+          sisa = sisa - 500
+          
+          if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa/ 200)
+         
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1}) 
+            sisa = sisa - 100
+  
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 200) {
+          data.push({ value: 200, qty: parseInt(sisa / 200) })
+          sisa = sisa - 200 * parseInt(sisa / 200)
+  
+          if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+  
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 100) {
+          data.push({ value: 100, qty: 1 })
+          sisa = sisa - 100
+        
+          setSisaMoney(sisa)
+        } else {
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 500) {
+        data.push({ value: 500, qty: 1 })
+        sisa = sisa - 500
+  
+        if(sisa >= 200) {
+          data.push({ value: 200, qty: parseInt(sisa / 200) })
+          sisa = sisa - 200 * parseInt(sisa / 200)
+
+          if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 100) {
+          data.push({ value: 100, qty: 1}) 
+          sisa = sisa - 100
+
+          setSisaMoney(sisa)
+        } else {
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 200) {
+        data.push({ value: 200, qty: parseInt(sisa / 200) })
+        sisa = sisa - 200 * parseInt(sisa / 200)
+
+        if(sisa >= 100) {
+          data.push({ value: 100, qty: 1 })
+          sisa = sisa - 100
+
+          setSisaMoney(sisa)
+        } else {
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 100) {
+        data.push({ value: 100, qty: 1 })
+        sisa = sisa - 100
+        
+        setSisaMoney(sisa)
+      } else {
+        
+        setSisaMoney(sisa)
+      }
+      setListMoney(data)
+    } else if(money >= 10000) {
+      const data = []
+      var qty1 = parseInt(money / 100000)
+      var sisa = money - 100000 * qty1
+
+      data.push({ value: 10000, qty: 1 })
+      sisa = sisa - 10000
+     
+      if(sisa >= 5000) {
+        data.push({ value: 5000, qty: 1 })
+        sisa = sisa - 5000
+    
+        if(sisa >= 2000) {
+          data.push({ value: 2000, qty: parseInt(sisa / 2000) })
+          sisa = sisa - 2000 * parseInt(sisa / 2000)
+          
+          if(sisa >= 1000) {
+            data.push({ value: 1000, qty: 1 })
+            sisa = sisa - 1000
+        
+            if(sisa >= 500) {
+              data.push({ value: 500, qty: 1 })
+              sisa = sisa - 500
+            
+              if(sisa >= 200) {
+                data.push({ value: 200, qty: parseInt(sisa / 200) })
+                sisa = sisa - 200 * parseInt(sisa / 200)
+
+                if(sisa >= 100) {
+                  data.push({ value: 100, qty: 1 })
+                  sisa = sisa - 100
+
+                  setSisaMoney(sisa)
+                } else {
+                  setSisaMoney(sisa)
+                }
+              } else if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+  
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+  
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+  
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+  
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+  
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+            
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 1000) {
+          data.push({ value: 1000, qty: 1 })
+          sisa = sisa - 1000
+      
+          if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+          
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 500) {
+          data.push({ value: 500, qty: 1 })
+          sisa = sisa - 500
+
+          if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 200) {
+          data.push({ value: 200, qty: parseInt(sisa / 200) })
+          sisa = sisa - 200 * parseInt(sisa / 200)
+
+          if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 100) {
+          data.push({ value: 100, qty: 1 })
+          sisa = sisa - 100
+          
+          setSisaMoney(sisa)
+        } else {
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 2000) {
+        data.push({ value: 2000, qty: parseInt(sisa / 2000) })
+        sisa = sisa - 2000 * parseInt(sisa / 2000)
+        
+        if(sisa >= 1000) {
+          data.push({ value: 1000, qty: 1 })
+          sisa = sisa - 1000
+         
+          if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+           
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+         
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }   
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 500) {
+          data.push({ value: 500, qty: 1 })
+          sisa = sisa - 500
+         
+          if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100 
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 200) {
+          data.push({ value: 200, qty: parseInt(sisa / 200) })
+          sisa = sisa - 200 * parseInt(sisa / 200)
+         
+          if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 100) {
+          data.push({ value: 100, qty: 1 })
+          sisa = sisa - 100
+
+          setSisaMoney(sisa)
+        } else {
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 1000) {
+        data.push({ value: 1000, qty: 1 })
+        sisa = sisa - 1000
+
+        if(sisa >= 500) {
+          data.push({ value: 500, qty: 1 })
+          sisa = sisa - 500
+    
+          if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+         
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 200) {
+          data.push({ value: 200, qty: parseInt(sisa / 200) })
+          sisa = sisa - 200 * parseInt(sisa / 200)
+
+          if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 100) {
+          data.push({ value: 100, qty: 1 })
+          sisa = sisa - 100
+
+          setSisaMoney(sisa)
+        } else {
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 500) {
+        data.push({ value: 500, qty: 1 })
+        sisa = sisa - 500
+
+        if(sisa >= 200) {
+          data.push({ value: 200, qty: parseInt(sisa / 200) })
+          sisa = sisa - 200 * parseInt(sisa / 200)
+
+          if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 100) {
+          data.push({ value: 100, qty: 1 })
+          sisa = sisa - 100
+
+          setSisaMoney(sisa)
+        } else {
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 200) {
+        data.push({ value: 200, qty: parseInt(sisa / 200) })
+        sisa = sisa - 200 * parseInt(sisa / 200)
+
+        if(sisa >= 100) {
+          data.push({ value: 100, qty: 1 })
+          sisa = sisa - 100
+
+          setSisaMoney(sisa)
+        } else {
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 100) {
+        data.push({ value: 100, qty: 1 })
+        sisa = sisa - 100
+        
+        setSisaMoney(sisa)
+      } else {
+        setSisaMoney(sisa)
+      }
+      setListMoney(data)
+    } else  if(money >= 5000) {
+      const data = []
+      var qty1 = parseInt(money / 100000)
+      var sisa = money - 100000 * qty1
+
+      data.push({ value: 5000, qty: 1 })
+      sisa = sisa - 5000
+  
+      if(sisa >= 2000) {
+        data.push({ value: 2000, qty: parseInt(sisa / 2000) })
+        sisa = sisa - 2000 * parseInt(sisa / 2000)
+        
+        if(sisa >= 1000) {
+          data.push({ value: 1000, qty: 1 })
+          sisa = sisa - 1000
+      
+          if(sisa >= 500) {
+            data.push({ value: 500, qty: 1 })
+            sisa = sisa - 500
+          
+            if(sisa >= 200) {
+              data.push({ value: 200, qty: parseInt(sisa / 200) })
+              sisa = sisa - 200 * parseInt(sisa / 200)
+
+              if(sisa >= 100) {
+                data.push({ value: 100, qty: 1 })
+                sisa = sisa - 100
+
+                setSisaMoney(sisa)
+              } else {
+                setSisaMoney(sisa)
+              }
+            } else if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 500) {
+          data.push({ value: 500, qty: 1 })
+          sisa = sisa - 500
+
+          if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 200) {
+          data.push({ value: 200, qty: parseInt(sisa / 200) })
+          sisa = sisa - 200 * parseInt(sisa / 200)
+
+          if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 100) {
+          data.push({ value: 100, qty: 1 })
+          sisa = sisa - 100
+          
+          setSisaMoney(sisa)
+        } else {
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 1000) {
+        data.push({ value: 1000, qty: 1 })
+        sisa = sisa - 1000
+    
+        if(sisa >= 500) {
+          data.push({ value: 500, qty: 1 })
+          sisa = sisa - 500
+        
+          if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 200) {
+          data.push({ value: 200, qty: parseInt(sisa / 200) })
+          sisa = sisa - 200 * parseInt(sisa / 200)
+
+          if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 100) {
+          data.push({ value: 100, qty: 1 })
+          sisa = sisa - 100
+
+          setSisaMoney(sisa)
+        } else {
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 500) {
+        data.push({ value: 500, qty: 1 })
+        sisa = sisa - 500
+
+        if(sisa >= 200) {
+          data.push({ value: 200, qty: parseInt(sisa / 200) })
+          sisa = sisa - 200 * parseInt(sisa / 200)
+
+          if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 100) {
+          data.push({ value: 100, qty: 1 })
+          sisa = sisa - 100
+
+          setSisaMoney(sisa)
+        } else {
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 200) {
+        data.push({ value: 200, qty: parseInt(sisa / 200) })
+        sisa = sisa - 200 * parseInt(sisa / 200)
+
+        if(sisa >= 100) {
+          data.push({ value: 100, qty: 1 })
+          sisa = sisa - 100
+
+          setSisaMoney(sisa)
+        } else {
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 100) {
+        data.push({ value: 100, qty: 1 })
+        sisa = sisa - 100
+        
+        setSisaMoney(sisa)
+      } else {
+        setSisaMoney(sisa)
+      }
+      setListMoney(data)
+    } else  if(money >= 2000) {
+      const data = []
+      var qty1 = parseInt(money / 100000)
+      var sisa = money - 100000 * qty1
+
+      data.push({ value: 2000, qty: parseInt(sisa / 2000) })
+      sisa = sisa - 2000 * parseInt(sisa / 2000)
+      
+      if(sisa >= 1000) {
+        data.push({ value: 1000, qty: 1 })
+        sisa = sisa - 1000
+    
+        if(sisa >= 500) {
+          data.push({ value: 500, qty: 1 })
+          sisa = sisa - 500
+        
+          if(sisa >= 200) {
+            data.push({ value: 200, qty: parseInt(sisa / 200) })
+            sisa = sisa - 200 * parseInt(sisa / 200)
+
+            if(sisa >= 100) {
+              data.push({ value: 100, qty: 1 })
+              sisa = sisa - 100
+
+              setSisaMoney(sisa)
+            } else {
+              setSisaMoney(sisa)
+            }
+          } else if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 200) {
+          data.push({ value: 200, qty: parseInt(sisa / 200) })
+          sisa = sisa - 200 * parseInt(sisa / 200)
+
+          if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 100) {
+          data.push({ value: 100, qty: 1 })
+          sisa = sisa - 100
+
+          setSisaMoney(sisa)
+        } else {
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 500) {
+        data.push({ value: 500, qty: 1 })
+        sisa = sisa - 500
+
+        if(sisa >= 200) {
+          data.push({ value: 200, qty: parseInt(sisa / 200) })
+          sisa = sisa - 200 * parseInt(sisa / 200)
+
+          if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 100) {
+          data.push({ value: 100, qty: 1 })
+          sisa = sisa - 100
+
+          setSisaMoney(sisa)
+        } else {
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 200) {
+        data.push({ value: 200, qty: parseInt(sisa / 200) })
+        sisa = sisa - 200 * parseInt(sisa / 200)
+
+        if(sisa >= 100) {
+          data.push({ value: 100, qty: 1 })
+          sisa = sisa - 100
+
+          setSisaMoney(sisa)
+        } else {
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 100) {
+        data.push({ value: 100, qty: 1 })
+        sisa = sisa - 100
+        
+        setSisaMoney(sisa)
+      } else {
+        setSisaMoney(sisa)
+      }
+      setListMoney(data)
+    } else  if(money >= 1000) {
+      const data = []
+      var qty1 = parseInt(money / 100000)
+      var sisa = money - 100000 * qty1
+
+      data.push({ value: 1000, qty: 1 })
+      sisa = sisa - 1000
+  
+      if(sisa >= 500) {
+        data.push({ value: 500, qty: 1 })
+        sisa = sisa - 500
+      
+        if(sisa >= 200) {
+          data.push({ value: 200, qty: parseInt(sisa / 200) })
+          sisa = sisa - 200 * parseInt(sisa / 200)
+
+          if(sisa >= 100) {
+            data.push({ value: 100, qty: 1 })
+            sisa = sisa - 100
+
+            setSisaMoney(sisa)
+          } else {
+            setSisaMoney(sisa)
+          }
+        } else if(sisa >= 100) {
+          data.push({ value: 100, qty: 1 })
+          sisa = sisa - 100
+
+          setSisaMoney(sisa)
+        } else {
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 200) {
+        data.push({ value: 200, qty: parseInt(sisa / 200) })
+        sisa = sisa - 200 * parseInt(sisa / 200)
+
+        if(sisa >= 100) {
+          data.push({ value: 100, qty: 1 })
+          sisa = sisa - 100
+
+          setSisaMoney(sisa)
+        } else {
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 100) {
+        data.push({ value: 100, qty: 1 })
+        sisa = sisa - 100
+
+        setSisaMoney(sisa)
+      } else {
+        setSisaMoney(sisa)
+      }
+      setListMoney(data)
+    } else if(money >= 500) {
+      const data = []
+      var qty1 = parseInt(money / 100000)
+      var sisa = money - 100000 * qty1
+
+      data.push({ value: 500, qty: 1 })
+      sisa = sisa - 500
+    
+      if(sisa >= 200) {
+        data.push({ value: 200, qty: parseInt(sisa / 200) })
+        sisa = sisa - 200 * parseInt(sisa / 200)
+
+        if(sisa >= 100) {
+          data.push({ value: 100, qty: 1 })
+          sisa = sisa - 100
+
+          setSisaMoney(sisa)
+        } else {
+          setSisaMoney(sisa)
+        }
+      } else if(sisa >= 100) {
+        data.push({ value: 100, qty: 1 })
+        sisa = sisa - 100
+
+        setSisaMoney(sisa)
+      } else {
+        setSisaMoney(sisa)
+      }
+      setListMoney(data)
+    } else  if(sisa >= 200) {
+      const data = []
+      var qty1 = parseInt(money / 100000)
+      var sisa = money - 100000 * qty1
+
+      data.push({ value: 200, qty: parseInt(sisa / 200) })
+      sisa = sisa - 200 * parseInt(sisa / 200)
+
+      if(sisa >= 100) {
+        data.push({ value: 100, qty: 1 })
+        sisa = sisa - 100
+
+        setSisaMoney(sisa)
+      } else {
+        setSisaMoney(sisa)
+      }
+      setListMoney(data)
+    } else  if(sisa >= 100) {
+      const data = []
+      var qty1 = parseInt(money / 100000)
+      var sisa = money - 100000 * qty1
+      data.push({ value: 100, qty: 1 })
+      sisa = sisa - 100
+
+      setSisaMoney(sisa)
+    } else {
+      setListMoney([])
+      setSisaMoney(money)
+    }
   }
   
   return (
