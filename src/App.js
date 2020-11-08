@@ -6304,30 +6304,41 @@ function App () {
           </button>
           </div>
             
-            {listMoney && listMoney.map((val) => {
-              return (
-                <>
-                  <span>Uang: {val.value} X {val.qty}</span>
-                  {/* <span>{val.qty}</span> */}
-                </>
-              )
-            })}
-            <span>Sisa: {sisaMoney}</span>
-        <table style={{ border: "1px solid black", textAlign: "center", marginTop: "50px" }}> 
+        <table style={{ 
+          border: "none", 
+          textAlign: "center", 
+          marginTop: "50px", 
+          borderCollapse: "collapse", 
+          width: "60%", 
+          marginBottom: "100px"
+         }}
+        > 
 
-          {/* <thead style={{ border: "1px solid black"}}>
-            <tr style={{ border: "1px solid black"}}>
-              <td>Satuan</td>
-              <td>Jumlah</td>
+          <thead style={{ padding: "20px"}}>
+            <tr style={{ border: "none",  backgroundColor: "#c4c4c4", height: "30px"}}>
+              <th>Satuan</th>
+              <th>Jumlah</th>
             </tr>
-          </thead> */}
+          </thead> 
 
-          {/* <tbody style={{ border: "1px solid black"}}>
+           <tbody style={{ border: "1px solid #c4c4c4"}}>
+      
+             {listMoney && listMoney.map((val, idx) => {
+               return (
+                 <tr style={{ height: "40px" }}>
+                  <td>Rp, {val.value} ,-</td>
+                  <td>{val.qty}</td>
+                 </tr>
+               )
+             })}
+          </tbody>
+
+          <tfoot style={{ backgroundColor: "#c4c4c4", height: "40px", fontWeight: "bold"}}>
             <tr>
-              <td>1</td>
-              <td>2</td>
+              <td>Sisa</td>
+              <td>{sisaMoney}</td>
             </tr>
-          </tbody> */}
+          </tfoot>
 
         </table>
       </div>
